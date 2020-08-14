@@ -4,8 +4,19 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    count = {}
 
-    pass
+    for item in arr:
+        if item in count:
+            del count[item]
+        else:
+            count[item] = 1
+    
+    for j, k in count.items():
+        if k == 1:
+            return j
+
+    
 
 
 if __name__ == '__main__':
